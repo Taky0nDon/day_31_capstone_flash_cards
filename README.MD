@@ -12,3 +12,5 @@ D A Y T H I R T Y O N E
   * =GOOGLETRANSLATE(CELL, FIRST_LANG, FINAL_LANG)
 
 # STEP ONE: CREATE THE UI
+
+* the `index` in pandas are called records
