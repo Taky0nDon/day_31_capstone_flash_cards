@@ -23,16 +23,18 @@ current_deck = data.to_dict(orient="records")
 # FRONT OF FLASH CARD
 current_card = None
 shown_words = []
+finished = None
 
 window = tk.Tk()
 
 # todo figure out how to add a word to list when check is cicked
 
 def word_is_known():
-    global current_card, current_deck
+    global current_card, current_deck, finished
     if len(current_deck) == 0 and len(shown_words) == 0:
         new_canvas = tk.Canvas()
         new_canvas.create_text(600, 263, text="You know all the words!")
+        finished = True
     else:
         current_deck.remove(current_card)
         show_front()
@@ -44,7 +46,6 @@ def save_new_csv():
 
 def show_front():
     global current_card, timer, current_deck, i
-    current_deck = [card for card in current_deck if card not in shown_words]
     window.after_cancel(timer)
     if len(current_deck) < 1:
         canvas.itemconfig(language, text="Done", fill="black")
@@ -65,7 +66,9 @@ def show_back():
     canvas.itemconfig(word, text=current_card['English'], fill="white")
 
 def dont_know():
-    global current_card
+    global current_card, finished
+    if finished == True:
+        pass
     current_deck.remove(current_card)
     shown_words.append(current_card)
     show_front()
