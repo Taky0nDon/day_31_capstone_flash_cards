@@ -16,6 +16,7 @@ every card shown to the user is removed from the deck until the deck is empty.
 2. A CSV file containing only the words that were marked unknown is saved every time the user marks a card.
 3. When the deck is empty, the user is asked if they want to keep learning.
    a. If the user clicks "No", the program ends.
+   
   b. If the user clicks "Yes", the program restarts with a new deck consisting only of the cards marked unknown.
 
 # Potential Improvements
