@@ -25,7 +25,7 @@ every card shown to the user is removed from the deck until the deck is empty.
 * Users could be allowed to create their own cards.
 * Users could store multiple decks to choose from when the program starts.
 * Code documentation could be improved (or made present)
-
+* Use feather instead of CSV?
 # Lesson notes
 
 ## flash card program
