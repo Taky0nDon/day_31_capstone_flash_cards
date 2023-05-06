@@ -124,4 +124,3 @@ check_button.grid(column=1, row=1)
 
 show_front()
 window.mainloop()
-
