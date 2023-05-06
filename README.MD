@@ -22,6 +22,7 @@ every card shown to the user is removed from the deck until the deck is empty.
 * I feel like this code is begging to be object oriented.
 * Users could be allowed to create their own cards.
 * Users could store multiple decks to choose from when the program starts.
+* Code documentation could be improved (or made present)
 
 # Lesson notes
 
