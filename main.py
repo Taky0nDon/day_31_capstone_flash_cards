@@ -4,7 +4,6 @@ import random as rnd
 import pandas as pd
 import pathlib as pl
 
-# todo give user the option to start again with unknown words only
 BACKGROUND_COLOR = "#B1DDC6"
 LANGUAGE_NAME_FONT = ("Ariel", 40, "italic")
 BACK = "./images/card_back.png"
@@ -32,7 +31,6 @@ def redeal_deck():
     another_round = messagebox.askyesno(title="Deck complete!",
                                         message="Do you want to keep learning?"
                                                 "Click 'Yes' to restart with the cards you still don't know.")
-    print(f"{another_round=}")
     if another_round:
         data_file = "./data/words_to_learn.csv"
         data = pd.read_csv(data_file)
@@ -58,8 +56,6 @@ def word_is_known():
 
 def save_new_csv():
     not_learned_words = shown_words + [card for card in current_deck]
-    print(f"{shown_words=}")
-    print(f"{current_deck=}")
     unknown_words = pd.DataFrame(not_learned_words)
     unknown_words.to_csv("./data/words_to_learn.CSV", index=False)
 
