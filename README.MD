@@ -18,7 +18,7 @@ every card shown to the user is removed from the deck until the deck is empty.
 
    a. If the user clicks "No", the program ends.
    
-  b. If the user clicks "Yes", the program restarts with a new deck consisting only of the cards marked unknown.
+   b. If the user clicks "Yes", the program restarts with a new deck consisting only of the cards marked unknown.
 
 # Potential Improvements
 * I feel like this code is begging to be object oriented.
